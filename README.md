@@ -1,0 +1,2 @@
+![image](https://github.com/user-attachments/assets/6cced9f1-3b64-4506-b2d0-ced738c40a7c)
+This project is a web-based calculator built with HTML, CSS, and JavaScript. It performs basic arithmetic operations such as addition, subtraction, multiplication, division, and percentage calculations. In addition to standard functionality, it features a live preview of the calculation result, a history panel that stores previous operations, and a dark mode toggle for improved user experience in different lighting conditions.
