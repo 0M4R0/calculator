@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div style="display: flex; justify-content: space-between;">
+                <!-- Dark mode/light mode -->
+                <button id="toggleDarkMode" onclick="toggleDarkMode()">Dark Mode</button>
+                <!-- History -->
+                <button id="toggleHistory" onclick="toggleHistory()">History</button>
+            </div>
+            
+            <div class="screen_calc">
+                <input type="text" placeholder="0" id="inputBox">
+                <div id="previewBox"></div>
+            </div>
+            <div>
+                <button onclick="clearScreen()">C</button>
+                <button onclick="del()">DEL</button>
+                <button class="operator" onclick="setOperator('%')">%</button>
+                <button class="operator" onclick="setOperator('/')">/</button>
+            </div>
+            <div>
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button class="operator" onclick="setOperator('*')">x</button>
+            </div>
+            <div>
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button class="operator" onclick="setOperator('-')">-</button>
+            </div>
+            <div>
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button class="operator" onclick="setOperator('+')">+</button>
+            </div>
+            <div>
+                <button onclick="appendNumber('.')">.</button>
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="calculate()" class="equal">=</button>
+            </div>
+        </div>
+
+        <div id="historyPanel">
+            <button id="closeHistory" onclick="toggleHistory()">&times;</button>
+            <h3>History</h3>
+            <div>
+                <ul id="historyList" style="list-style: none; padding-left: 0; margin: 0;">
+                    <p class="no-history">No history available.</p>
+                </ul>
+            </div>
+            <button id="clearHistory" onclick="clearHistory()">Clear</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

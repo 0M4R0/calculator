@@ -1,0 +1,200 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    margin: 0;
+    transition: background 0.5s, color 0.7s ease;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    /*align-items: flex-start;
+    height: 100vh; */
+}
+
+.calculator,
+#historyPanel {
+    width: 320px;
+    border-radius: 10px;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.8s ease;
+}
+
+#inputBox {
+    width: 100%;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+    background: #eaeaea;
+    transition: background 0.3s, color 0.3s;
+}
+
+#previewBox {
+    width: 100%;
+    text-align: right;
+    font-size: 1.2rem;
+    color: #888;
+    min-height: 30px;
+    margin-bottom: 5px;
+    display: none;
+    transition: 0.3s ease;
+}
+
+.screen_calc {
+    border-radius: 5px;
+    background: #eaeaea;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 22%;
+    padding: 15px;
+    margin: 1%;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #d0d0d0;
+}
+
+.equal {
+    background-color: #fc7c20;
+    width: 47%;
+}
+
+.equal:hover {
+    background-color: #d0d0d0;
+}
+
+.operator {
+    background-color: #fc7c20;
+}
+
+#toggleDarkMode,
+#toggleHistory {
+    width: 48%;
+    margin-bottom: 10px;
+    background-color: #6d6d6d;
+    color: #fff;
+}
+
+#historyPanel {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    max-height: 90vh;
+    overflow-y: auto;
+    font-family: sans-serif;
+}
+
+#historyPanel h3 {
+    margin-top: 0;
+}
+
+body.dark {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .calculator {
+    background: #333;
+}
+
+body.dark .screen_calc {
+    background: #444;
+    border: 1px solid #555;
+}
+
+body.dark #inputBox {
+    background: #444;
+    color: #fff;
+}
+
+body.dark #previewBox {
+    color: #ccc;
+}
+
+body.dark button {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark button:hover {
+    background-color: #666;
+}
+
+body.dark button.operator {
+    background-color: #fc7c20;
+    color: #fff;
+}
+
+body.dark button.equal {
+    background-color: #fc7c20;
+    color: #fff;
+}
+
+body.dark button.operator {
+    background-color: #fc7c20;
+    color: #fff;
+}
+
+#historyPanel.dark {
+    background: #333;
+    border-color: #555;
+    color: #fff;
+}
+
+#closeHistory {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 3px;
+    width: 30px;
+    background-color: red;
+    color: #fff;
+}
+
+#clearHistory {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    padding: 5px;
+    width: 40px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+#clearHistory:hover, #closeHistory:hover {
+    background-color: #d0d0d0;
+}
+
+.no-history {
+    color: #888;
+    text-align: center;
+}
