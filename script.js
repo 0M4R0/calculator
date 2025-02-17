@@ -11,9 +11,8 @@ function updateDisplay() {
     const inputBox = document.getElementById("inputBox");
 
     // Format first and second numbers if they exist
-    const firstNumber = firstAppend 
-    const secondNumber = secondAppend
-
+    const firstNumber = firstAppend; 
+    const secondNumber = secondAppend;
 
     if (secondAppend !== "") {
         inputBox.value = firstNumber + " " + currentOperator + " " + secondNumber;
@@ -95,8 +94,7 @@ function setOperator(operator) {
 
 // Calculate: Performs the calculation based on the current operator and append result to history
 function calculate() {
-    if (firstAppend === "" || secondAppend === "" || currentOperator === "")
-        return;
+    if (firstAppend === "" || secondAppend === "" || currentOperator === "") return;
     let result = 0;
     const num1 = parseFloat(firstAppend);
     const num2 = parseFloat(secondAppend);
@@ -122,7 +120,7 @@ function calculate() {
 
     // Round result and remove unnecessary decimals
     if (typeof result === "number") {
-        result = parseFloat(result.toFixed(10)); // Redondeo a 10 decimales y elimino ceros innecesarios
+        result = parseFloat(result.toFixed(10));
     }
 
     // Build and save the operation string in history
@@ -219,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Update History: shows the list of past operations
 function updateHistory() {
     const historyList = document.getElementById("historyList");
-    // Check if history is empty
+    // Check if history is empty and display message if it is
     if (calcHistory.length === 0) {
         const noHistory = document.createElement("p");
         noHistory.classList.add("no-history");
@@ -228,7 +226,6 @@ function updateHistory() {
         return;
     }
     historyList.innerHTML = "";
-
     // Show first calc on reverse
     calcHistory
         .slice()
